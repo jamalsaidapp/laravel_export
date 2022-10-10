@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('stock', [\App\Http\Controllers\StockController::class, 'index']);
+Route::get('export_stock', [\App\Http\Controllers\StockController::class, 'exportALl']);
