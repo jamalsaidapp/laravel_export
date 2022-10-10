@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return dd('server Running...');
 });
+Route::get('export_stock', [\App\Http\Controllers\StockController::class, 'exportALl']);
